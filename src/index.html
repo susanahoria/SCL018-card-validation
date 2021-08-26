@@ -1,13 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <div class="container">
+        <section class="tarjeta" id="tarjeta">
+          <div class="delantera">
+            <div class="logo">
+              <img src="bg-tarjeta/logo.png" alt="" />
+            </div>
+            <img src="bg-tarjeta/chip.jpg" class="chip" />
+            <div class="datos">
+              <div class="grupo" id="numero">
+                <p class="label">Número tarjeta</p>
+                <p class="numero">**** **** **** ****</p>
+              </div>
+              <div class="flexbox">
+                <div class="grupo" id="nombre">
+                  <p class="label">Nombre tarjeta</p>
+                  <p class="nombre">Susan Ortiz</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <label for="numeroTarjeta">ingrese número de tarjeta</label>
+        <input
+          type="number"
+          id="numeroTarjeta"
+          placeholder="xxxx-xxxx-xxxx-xxxx"
+        />
+        <button id="boton">Clickea</button>
+      </div>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
