@@ -1,0 +1,125 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background: coral;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  padding: 40px 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/*tarjeta*/
+
+.tarjeta {
+  width: 100%;
+  max-width: 550px;
+  position: relative;
+  color: aliceblue;
+  z-index: 2;
+}
+
+.tarjeta > div {
+  padding: 30px;
+  border-radius: 15px;
+  min-height: 315px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 0 rgba(90, 116, 148, 0.3);
+}
+
+.tarjeta .estiloTarjeta {
+  width: 100%;
+  background: url(../src/bg-tarjeta/fondo.jpeg);
+  background-size: cover;
+}
+.estiloTarjeta .logo {
+  text-align: right;
+  min-height: 50px;
+}
+.estiloTarjeta .logo img {
+  margin-top: -10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: 80px;
+}
+.estiloTarjeta .chip {
+  width: 100%;
+  margin-left: 20px;
+  margin-top: 8px;
+  max-width: 70px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.estiloTarjeta .grupo .label {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.estiloTarjeta .grupo .nombre,
+.estiloTarjeta .grupo .numero {
+  color: black;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/*--boton para el formulario*/
+.container-boton .btn-abrir-form {
+  background-image: url(../src/bg-tarjeta/boton.png);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  line-height: 20px;
+  position: relative;
+  top: -25px;
+  z-index: 3;
+  border-radius: 100%;
+  box-shadow: -5px 4px 8px rgba(24, 56, 182, 0.4);
+  padding: 5px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.container-boton .btn-abrir-form.active {
+  transform: rotate(45deg);
+}
+
+/*--Formulario tarjeta--*/
+.formularioTarjeta {
+  background: aquamarine;
+  width: 100%;
+  padding: 150px 30px 30px;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  top: -150px;
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.3s ease-out;
+}
+
+.formularioTarjeta.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formularioTarjeta label {
+  display: block;
+  color: gray;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
