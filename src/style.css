@@ -13,7 +13,49 @@ body::after {
   bottom: 0;
   right: 0;
   background-size: cover;
-  position: absolute;
+  position: fixed;
+}
+.header {
+  color: rgb(187, 149, 175);
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  height: 25px;
+  flex-wrap: wrap;
+}
+.h1 {
+  margin-left: 15px;
+  font-size: 45px;
+}
+
+.imagen-header {
+  margin-left: 25px;
+  width: 50px;
+  height: 50px;
+}
+.botones {
+  margin-left: 800px;
+  margin-top: 0%;
+}
+.boton {
+  color: aliceblue;
+  height: 55px;
+  width: 150px;
+  justify-content: space-between;
+  background-color: rgba(83, 11, 83, 0.9);
+  box-shadow: 2px 2px 10px 0px rgba(121, 33, 121, 0.3);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  position: fixed;
+}
+.ingresar-btn {
+  margin-left: 170px;
+}
+.ingresar-btn:hover,
+.explorar-btn:hover {
+  width: 160px;
+  background: rgba(51, 7, 51, 0.774);
 }
 
 .container {
@@ -105,10 +147,11 @@ body::after {
 
 .container-boton .btn-abrir-form.active {
   transform: rotate(45deg);
-  width: 40px;
-  height: 40px;
+  position: relative;
+  width: 44px;
+  height: 44px;
 }
-s
+
 /*--Formulario tarjeta--*/
 .formulario-tarjeta {
   background: rgb(247, 212, 245);

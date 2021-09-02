@@ -6,7 +6,18 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <img
+        src="./bg-tarjeta/bandera-de-japon.png"
+        alt=""
+        class="imagen-header"
+      />
+      <h1 class="h1">Anime Plus</h1>
+      <div class="botones">
+        <button class="boton ingresar-btn">INGRESAR</button>
+        <button class="boton explorar-btn">EXPLORAR</button>
+      </div>
+    </header>
     <main>
       <div class="container">
         <!--tarjeta-->
@@ -19,12 +30,12 @@
             <div class="datos">
               <div class="grupo" id="numero">
                 <p class="label">Número tarjeta</p>
-                <p class="numero">**** **** **** ****</p>
+                <p class="numero" id="numeroInput">**** **** **** ****</p>
               </div>
               <div class="flexbox">
                 <div class="grupo" id="nombre">
                   <p class="label">Nombre tarjeta</p>
-                  <p class="nombre">Susan Ortiz</p>
+                  <p class="nombre" id="nombreInput">*****</p>
                 </div>
               </div>
             </div>
@@ -38,11 +49,21 @@
         <form action="" id="formularioTarjeta" class="formulario-tarjeta">
           <div class="grupo">
             <label for="numeroTarjeta">Número tarjeta</label>
-            <input type="text" id="numeroTarjeta" maxlength="16" />
+            <input
+              type="text"
+              id="numeroTarjeta"
+              maxlength="19"
+              autocomplete="off"
+            />
           </div>
           <div class="grupo">
             <label for="nombreTarjeta">Nombre tarjeta</label>
-            <input type="text" id="nombreTarjeta" maxlength="40" />
+            <input
+              type="text"
+              id="nombreTarjeta"
+              maxlength="50"
+              autocomplete="off"
+            />
           </div>
           <button type="button" class="btn-enviar" id="boton">Clickea</button>
         </form>

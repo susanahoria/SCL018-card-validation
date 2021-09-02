@@ -1,5 +1,7 @@
 const validator = {
   isValid: function (numeroTarjeta) {
+    const numeroIngresado = numeroTarjeta;
+
     const numerosInvertidos = numeroTarjeta.split("").reverse().join("");
     let sumaTotal = 0;
     for (let i = 0; i < numerosInvertidos.length; i++) {
@@ -22,6 +24,7 @@ const validator = {
         sumaTotal += parseInt(numero);
       }
     }
+
     console.log(sumaTotal);
     console.log(numerosInvertidos);
     if (sumaTotal % 10 === 0) {
