@@ -32,14 +32,13 @@ const validator = {
     }
   },
   maskify: function (numeroTarjeta) {
-    numeroTarjeta = numeroTarjeta.replaceAll(" ", "");
     const numerosInvertidos = numeroTarjeta.split("").reverse().join("");
     let inputTarjeta = "";
     for (let i = 0; i < numerosInvertidos.length; i++) {
       if (i < 4) {
         inputTarjeta += numerosInvertidos[i];
       } else {
-        inputTarjeta += "*";
+        inputTarjeta += "#";
       }
     }
     const numeroEnmascarado = inputTarjeta.split("").reverse().join("");

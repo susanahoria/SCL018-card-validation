@@ -14,9 +14,9 @@ boton.addEventListener("click", function () {
     } else {
       alert("Su tarjeta no es valida :(");
     }
-    console.log(validator.isValid(numeroTarjeta));
-    console.log("Tarjeta enmascarada " + validator.maskify(numeroTarjeta));
   }
+  console.log(validator.isValid(numeroTarjeta));
+  console.log("Tarjeta enmascarada " + validator.maskify(numeroTarjeta));
 });
 
 //para girar boton y para que abra el formulario//
@@ -38,10 +38,13 @@ formulario.numeroTarjeta.addEventListener("keyup", function (e) {
     .replace(/\D/g, "")
     .replace(/([0-9]{4})/g, "$1 ")
     .trim();
+
   if (valorInput === "") {
-    numeroTarjetaInput.textContent = "**** **** **** ****";
+    numeroTarjetaInput.textContent = "#### #### #### ####";
   } else {
-    const tarjetaEnmascarada = validator.maskify(valorInput);
+    const tarjetaEnmascarada = validator.maskify(
+      valorInput.replaceAll(" ", "")
+    );
     numeroTarjetaInput.textContent = tarjetaEnmascarada
       .match(/.{1,4}/g)
       .join(" ");
@@ -53,7 +56,7 @@ formulario.nombreTarjeta.addEventListener("keyup", function (e) {
   formulario.nombreTarjeta.value = valorInput.replace(/[0-9]/g, "");
 
   if (valorInput === "") {
-    nombreTarjetaInput.textContent = "*****";
+    nombreTarjetaInput.textContent = "##### #####";
   } else {
     nombreTarjetaInput.textContent = valorInput;
   }
