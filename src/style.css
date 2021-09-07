@@ -214,3 +214,61 @@ body::after {
 .formulario-tarjeta .btn-enviar:hover {
   background: rgba(51, 7, 51, 0.774);
 }
+
+/*--Tarjetas de suscripcion--*/
+
+.suscripciones {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.suscripcion {
+  background: rgba(153, 11, 153, 0.774);
+  color: rgb(194, 169, 186);
+  margin-top: 100px;
+  width: 95%;
+  height: 550px;
+  z-index: 2;
+  justify-content: space-between;
+  border-radius: 7px;
+}
+
+.h1-suscripcion {
+  text-align: center;
+  background-color: rgba(92, 9, 92, 0.774);
+  height: 60px;
+  box-shadow: rgba(11, 12, 14, 0.3);
+}
+
+.beneficios {
+  margin-top: 20px;
+  flex-direction: column;
+  display: flex;
+  margin-left: 50px;
+  width: 90%;
+  justify-content: space-between;
+  padding: 5px 12px;
+  font-size: large;
+}
+
+.boton-suscripcion {
+  cursor: pointer;
+  width: 1000px;
+  height: 50px;
+  margin-top: 200px;
+  margin-left: 100px;
+  background-color: rgba(158, 25, 76, 0.774);
+  box-shadow: rgba(32, 5, 32, 0.774);
+  border: none;
+  border-radius: 7px;
+  justify-content: center;
+  color: antiquewhite;
+  font-size: xx-large;
+}
+.boton-suscripcion:hover {
+  border: 2px solid rgb(155, 14, 49);
+  background-color: rgba(11, 12, 14, 0.3);
+}

@@ -1,7 +1,5 @@
 const validator = {
   isValid: function (numeroTarjeta) {
-    const numeroIngresado = numeroTarjeta;
-
     const numerosInvertidos = numeroTarjeta.split("").reverse().join("");
     let sumaTotal = 0;
     for (let i = 0; i < numerosInvertidos.length; i++) {
@@ -25,15 +23,28 @@ const validator = {
       }
     }
 
-    console.log(sumaTotal);
-    console.log(numerosInvertidos);
+    console.log("La suma total de los numeros es " + sumaTotal);
+    console.log("Los numeros invertidos son " + numerosInvertidos);
     if (sumaTotal % 10 === 0) {
       return true;
     } else {
       return false;
     }
   },
-  maskify: function () {},
+  maskify: function (numeroTarjeta) {
+    numeroTarjeta = numeroTarjeta.replaceAll(" ", "");
+    const numerosInvertidos = numeroTarjeta.split("").reverse().join("");
+    let inputTarjeta = "";
+    for (let i = 0; i < numerosInvertidos.length; i++) {
+      if (i < 4) {
+        inputTarjeta += numerosInvertidos[i];
+      } else {
+        inputTarjeta += "*";
+      }
+    }
+    const numeroEnmascarado = inputTarjeta.split("").reverse().join("");
+    return numeroEnmascarado;
+  },
 };
 
 export default validator;

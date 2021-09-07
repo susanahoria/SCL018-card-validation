@@ -9,7 +9,13 @@ boton.addEventListener("click", function () {
   if (numeroTarjeta === "") {
     alert("Ingrese numero tarjeta");
   } else {
+    if (validator.isValid(numeroTarjeta) === true) {
+      alert("Su tarjeta es valida <3");
+    } else {
+      alert("Su tarjeta no es valida :(");
+    }
     console.log(validator.isValid(numeroTarjeta));
+    console.log("Tarjeta enmascarada " + validator.maskify(numeroTarjeta));
   }
 });
 
@@ -26,7 +32,6 @@ const nombreTarjetaInput = document.getElementById("nombreInput");
 //Input numero de tarjeta//
 //la e en function es para recibir el evento
 //target.value se accede al valor del input numerotarjeta
-//para pasar una expresion regular, para reemplazar coincidencias.
 formulario.numeroTarjeta.addEventListener("keyup", function (e) {
   let valorInput = e.target.value.trim(); //aqui se guarda el valor ingresado
   formulario.numeroTarjeta.value = valorInput
@@ -36,7 +41,10 @@ formulario.numeroTarjeta.addEventListener("keyup", function (e) {
   if (valorInput === "") {
     numeroTarjetaInput.textContent = "**** **** **** ****";
   } else {
-    numeroTarjetaInput.textContent = valorInput;
+    const tarjetaEnmascarada = validator.maskify(valorInput);
+    numeroTarjetaInput.textContent = tarjetaEnmascarada
+      .match(/.{1,4}/g)
+      .join(" ");
   }
 });
 
