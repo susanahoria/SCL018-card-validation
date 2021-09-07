@@ -273,8 +273,11 @@ body::after {
   background-color: rgba(11, 12, 14, 0.3);
 }
 
-.footer > p {
+footer {
+  bottom: 0px;
+  position: fixed;
   background-color: black;
+  width: 100%;
   z-index: 4;
   color: aliceblue;
 }

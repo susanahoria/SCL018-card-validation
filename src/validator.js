@@ -23,8 +23,8 @@ const validator = {
       }
     }
 
-    console.log("La suma total de los numeros es " + sumaTotal);
-    console.log("Los numeros invertidos son " + numerosInvertidos);
+    //console.log("La suma total de los numeros es " + sumaTotal);
+    //console.log("Los numeros invertidos son " + numerosInvertidos);
     if (sumaTotal % 10 === 0) {
       return true;
     } else {
