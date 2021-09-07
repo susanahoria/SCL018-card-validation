@@ -10,7 +10,7 @@ boton.addEventListener("click", function () {
     alert("Ingrese numero tarjeta");
   } else {
     if (validator.isValid(numeroTarjeta) === true) {
-      alert("Su tarjeta es valida <3");
+      alert("Su tarjeta es valida <3, bienvenido a la comunidad Anime Plus");
     } else {
       alert("Su tarjeta no es valida :(");
     }
