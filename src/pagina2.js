@@ -52,7 +52,7 @@ formulario.numeroTarjeta.addEventListener("keyup", function (e) {
 });
 
 formulario.nombreTarjeta.addEventListener("keyup", function (e) {
-  let valorInput = e.target.value.trim();
+  let valorInput = e.target.value;
   formulario.nombreTarjeta.value = valorInput.replace(/[0-9]/g, "");
 
   if (valorInput === "") {

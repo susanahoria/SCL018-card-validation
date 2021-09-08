@@ -1,7 +1,7 @@
 ##Proyecto card-validator "Anime Plus"
 éste proyecto está orientado a un streaming de anime, para todo tipo de edades y generos
 en el siguiente link está la "maquetación" o más bien prototipo del proyecto hecho en figma
-(https://www.figma.com/file/wZsPaFmCvpFV0OvoUWeSUH/Untitled?node-id=10%3A4)git push
+(https://www.figma.com/file/wZsPaFmCvpFV0OvoUWeSUH/Untitled?node-id=10%3A4)
 el principal objetivo de mi proyecto es validar una tarjeta de credito usando el algoritmo de Luhn.
 
 Para modificar, utilizar o si quieres probar el codigo tu mismo puedes descargarlo en mi github (/susanahoria/SCL018-card-validation) haciendole fork.
